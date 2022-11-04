@@ -8,7 +8,15 @@
 그리고 그 python이 살아있는지 주기적으로 확인하고 죽었으면 살리는 쉘 스크립트(.sh)를 작성하고
 이를 crontab에 등록하여 주기적으로 쉘 스크립트를 실행시키도록 스케쥴링을 걸었다.
 
+* 참고: electron 기반으로 구동되는 프로그램(javascript 기반)
+
+## crontab 초기 설정
+
 ```
-프로그램: electron 앱(javascript 기반)
-
-
+* * * * * sh /home/사용자폴더/.../쉘스크립트.sh > 쉘스크립트.sh.log 2>&1
+* * * * * sleep 10; sh /home/사용자폴더/.../쉘스크립트.sh > 쉘스크립트.sh.log 2>&1
+* * * * * sleep 20; sh /home/사용자폴더/.../쉘스크립트.sh > 쉘스크립트.sh.log 2>&1
+* * * * * sleep 30; sh /home/사용자폴더/.../쉘스크립트.sh > 쉘스크립트.sh.log 2>&1
+* * * * * sleep 40; sh /home/사용자폴더/.../쉘스크립트.sh > 쉘스크립트.sh.log 2>&1
+* * * * * sleep 50; sh /home/사용자폴더/.../쉘스크립트.sh > 쉘스크립트.sh.log 2>&1
+```
